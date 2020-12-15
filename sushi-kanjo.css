@@ -9,6 +9,7 @@ body {
   background-color: rgb(255, 255, 255);
   font-family: 'Noto Sans JP', sans-serif;
   touch-action: manipulation;
+  width: 100%;
 }
 h1 {
   background-color: rgb(54, 54, 54);
