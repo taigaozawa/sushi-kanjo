@@ -102,6 +102,7 @@ const displaySushiCounterArea = () => {
     /** お皿の枚数を減らすボタン */
     const decrementButton = document.createElement('button');
     decrementButton.innerText = 'マイナス -';
+    decrementButton.setAttribute('class', 'button-gray');
     decrementButton.onclick = () => {
       sushiType.decrement();
       displaySushiCounterArea();
@@ -111,6 +112,7 @@ const displaySushiCounterArea = () => {
     /** お皿の種類の削除ボタン */
     const deleteSushiTypeButton = document.createElement('button');
     deleteSushiTypeButton.innerText = 'このお皿の種類を削除';
+    deleteSushiTypeButton.setAttribute('class', 'button-gray');
     deleteSushiTypeButton.onclick = () => {
       deleteSushiType(index);
       displaySushiCounterArea();
