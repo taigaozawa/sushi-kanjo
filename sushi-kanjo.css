@@ -8,6 +8,7 @@ body {
   margin: 0 0.5rem 0 0.5rem;
   background-color: rgb(255, 255, 255);
   font-family: 'Noto Sans JP', sans-serif;
+  touch-action: manipulation;
 }
 h1 {
   background-color: rgb(54, 54, 54);
