@@ -10,20 +10,22 @@
 
 <body>
   <h1>お寿司勘定アプリ</h1>
-  <p>お寿司を食べたらボタンを押して、簡単に会計計算しましょう！</p>
-  <h2>お皿の種類を追加する</h2>
-  <div class="setting-area">
-    <input type="number" min="0" id="price" value="100"> 円の
-    <input type="color" id="color" value="#FF0000"> 色のお皿 
-    <button id="add-sushi-type" class="add-sushi-type"> + 追加する</button>
+  <div class="main">
+    <p>お寿司を食べたらボタンを押して、簡単に会計計算しましょう！</p>
+    <h2>お皿の種類を追加する</h2>
+    <div class="setting-area">
+      <input type="number" min="0" id="price" value="100"> 円の
+      <input type="color" id="color" value="#FF0000"> 色のお皿
+      <button id="add-sushi-type" class="add-sushi-type"> + 追加する</button>
+    </div>
+    <h2>お皿の枚数をカウントする</h2>
+    <div id="sushi-counter-area">
+      <p>まだお皿の種類が登録されていません。</p>
+    </div>
+    <h2>合計金額</h2>
+    <p><span id="total-price-area" class="total-price-area">0</span><span class="yen">円</span></p>
+    <script src="sushi-kanjo.js"></script>
   </div>
-  <h2>お皿の枚数をカウントする</h2>
-  <div id="sushi-counter-area">
-    <p>まだお皿の種類が登録されていません。</p>
-  </div>
-  <h2>合計金額</h2>
-  <p><span id="total-price-area" class="total-price-area">0</span><span class="yen">円</span></p>
-  <script src="sushi-kanjo.js"></script>
 </body>
 
 </html>
