@@ -71,27 +71,28 @@ const displaySushiCounterArea = () => {
   sushiTypes.forEach((sushiType, index) => {
     /** 寿司カウンタ */
     const sushiCounter = document.createElement('div');
-    sushiCounter.setAttribute('class', 'sushiCounter');
+    sushiCounter.setAttribute('class', 'sushi-counter');
 
     /** お皿の色 */
     const colorDisplay = document.createElement('div');
-    colorDisplay.setAttribute('class', 'colorDisplay');
+    colorDisplay.setAttribute('class', 'color-display');
     colorDisplay.style.backgroundColor = sushiType.color;
     sushiCounter.appendChild(colorDisplay);
 
     /** お皿の種類 */
-    const title = document.createElement('h3');
+    const title = document.createElement('p');
     title.innerText = sushiType.name;
     sushiCounter.appendChild(title);
 
     /** お皿の枚数 */
     const count = document.createElement('p');
+    count.setAttribute('class', 'count-display');
     count.innerText = String(sushiType.count) + '枚';
     sushiCounter.appendChild(count);
 
     /** お皿の枚数を増やすボタン */
     const inclementButton = document.createElement('button');
-    inclementButton.innerText = '+1';
+    inclementButton.innerText = 'プラス +';
     inclementButton.onclick = () => {
       sushiType.inclement();
       displaySushiCounterArea();
@@ -100,7 +101,7 @@ const displaySushiCounterArea = () => {
 
     /** お皿の枚数を減らすボタン */
     const decrementButton = document.createElement('button');
-    decrementButton.innerText = '-1';
+    decrementButton.innerText = 'マイナス -';
     decrementButton.onclick = () => {
       sushiType.decrement();
       displaySushiCounterArea();
@@ -132,7 +133,7 @@ const displaySushiCounterArea = () => {
  * @param {number} index
  */
 const deleteSushiType = index => {
-  sushiTypes.splice(index);
+  sushiTypes.splice(index, 1);
 }
 
 /**
